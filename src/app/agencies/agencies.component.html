@@ -1,0 +1,41 @@
+<mat-toolbar color="primary" role="heading">
+  <span>Agencias</span>
+</mat-toolbar>
+<div class="list">
+  <div *ngFor="let item of agenciesList; let i = index">
+    <div class="list-item">
+      <img
+        class="lazyload"
+        [attr.data-src]="getRandomImg(i)"
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C/svg%3E"
+        alt="Agencia"
+      />
+      <div class="item-detail">
+        <h2>{{ item.agencia }}</h2>
+        <div>{{ item.departamento }}, {{ item.provincia }}</div>
+        <div>{{ item.direccion }}, {{ item.distrito }}</div>
+      </div>
+      <div class="btn-container">
+        <button
+          mat-stroked-button
+          color="primary"
+          (click)="goToDetail(item.id)"
+        >
+          Detalle
+        </button>
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+  </div>
+</div>
+
+<button
+  class="btn-add"
+  mat-fab
+  color="accent"
+  aria-label="Add icon"
+  (click)="add()"
+>
+  <mat-icon>add</mat-icon>
+</button>

@@ -1,0 +1,21 @@
+mat-toolbar {
+  position: fixed;
+  z-index: 1;
+}
+
+form {
+  padding-top: 90px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.mat-form-field {
+  width: 100%;
+  padding: 20px;
+}
